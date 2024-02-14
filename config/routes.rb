@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   post("update_user/:user_id", controller: "users", action: "update")
 
+
+
   get("/photos", controller: "photos", action: "list")
 
   post("/insert_photo_record", controller: "photos", action: "create")
@@ -18,8 +20,10 @@ Rails.application.routes.draw do
 
   post("/update_photo/:photo_id", controller: "photos", action: "update")
 
+  get("/delete_photo/:photo_id", controller: "photos", action: "destroy")
+
+  
   post("/add_comment", controller: "comments", action: "create")
 
-  get("/delete_photo/:photo_id", controller: "photos", action: "destroy")
 
 end
