@@ -30,7 +30,7 @@ class UsersController < ApplicationController
       updated_user.save
       redirect_to("/users/#{updated_user.username}", { :notice => "User updated successfully." })
     else
-      redirect_to("/users/#{updated_duser.username}", { :notice => "User failed to update successfully." })
+      redirect_to("/users/#{updated_user.username}", { :notice => "User failed to update successfully." })
     end
 
   end
